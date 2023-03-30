@@ -1,0 +1,20 @@
+@import '/src/styles/variables.scss';
+
+header{
+    padding: 24px 32px;
+    border-bottom: 1px solid $color-grey-0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: $color-white-0;
+    a{
+        display: block;
+        width: fit-content;
+    }
+    svg{
+        path{
+            fill: $color-black-0;
+        }
+    }
+}

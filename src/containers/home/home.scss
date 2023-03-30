@@ -1,0 +1,33 @@
+@import '/src/styles/variables.scss';
+
+.home{
+    padding: 100px 0;
+    &Content{
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        .card{
+            padding: 24px 48px;
+            border-radius: 8px;
+            border: 1px solid $color-grey-0;
+            cursor: pointer;
+            flex-basis: 32%;
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            h2{
+                font-size: 32px;
+                font-weight: 500;
+                color: $color-black-0;
+            }
+            &:hover{
+                background-color: $color-black-0;
+                h2{
+                    color: $color-white-0;
+                }
+            }
+        }
+    }
+}

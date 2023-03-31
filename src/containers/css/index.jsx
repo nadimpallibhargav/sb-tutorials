@@ -1,92 +1,91 @@
-import React, { useState } from "react";
+import React from "react";
 import { Prism } from "@mantine/prism";
-import { CSSData } from "../../data/css";
 
 const CSS = () => {
-  const [chapterContent, setChapterContent] = useState(CSSData[0]);
-  const [index, setIndex] = useState(0)
-
-  const updateContent = (val, i) => {
-    setIndex(i)
-    setChapterContent(val)
-   }
-
   return (
     <section className="main">
       <nav>
         <ul>
-          {CSSData.map((val, i) => {
-            return (
-              <li key={i} className={index === i && "active"} onClick={() => updateContent(val, i)}>
-                {val.topic}
-              </li>
-            );
-          })}
+          <li>
+            <a href="/css">Intro to CSS</a>
+          </li>
+          <li>
+            <a href="/css-basics">CSS Basics</a>
+          </li>
         </ul>
       </nav>
-      <h1>{chapterContent.topic}</h1>
+      <h1>Intro to CSS</h1>
       <div className="content">
-        {chapterContent?.content?.map((val, i) => {
-          return (
-            <div key={i}>
-              <h2>{val.title}</h2>
-              {val?.para &&
-                val?.para?.map((para, i) => {
-                  return <p key={i}>{para}</p>;
-                })}
-
-              {val?.list && (
-                <ul>
-                  {val?.list?.map((list, index) => {
-                    return (
-                      <li key={index}>
-                        {list.li}
-                        {list?.nestedList && (
-                          <ul>
-                            {list?.nestedList?.map((nestedList, i) => {
-                              return <li key={i}>{nestedList}</li>;
-                            })}
-                          </ul>
-                        )}
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-
-              {val?.orderedList && (
-                <ol>
-                  {val?.orderedList?.map((olVal, index) => {
-                    return (
-                      <li key={index}>
-                        {olVal.li}
-                        {olVal?.nestedList && (
-                          <ul>
-                            {olVal?.nestedList?.map((nestedList, i) => {
-                              return <li key={i}>{nestedList}</li>;
-                            })}
-                          </ul>
-                        )}
-                      </li>
-                    );
-                  })}
-                </ol>
-              )}
-              {val.image && (
-                <div className="imgWrapper">
-                  <img src={val.image} alt={val.alt} />
-                </div>
-              )}
-              {val?.code && (
-                <div className="codeWrapper">
-                  <Prism className="prism" language="tsx" colorScheme="dark">
-                    {val.code}
-                  </Prism>
-                </div>
-              )}
-            </div>
-          );
-        })}
+        <h2>Intro</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur¿ ʔ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+          adipisicing elit. Molestiae, officiis quasi! Recusandae vel amet aut.
+          Maiores id cumque laborum, consequuntur animi, qui ad quisquam
+          obcaecati harum tenetur, amet ullam nobis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae,
+          officiis quasi! Recusandae vel amet aut. Maiores id cumque laborum,
+          consequuntur animi, qui ad quisquam obcaecati harum tenetur, amet
+          ullam nobis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae,
+          officiis quasi! Recusandae vel amet aut. Maiores id cumque laborum,
+          consequuntur animi, qui ad quisquam obcaecati harum tenetur, amet
+          ullam nobis.
+        </p>
+        <h2>CSS</h2>
+        <ul>
+          <li>A CSS rule set contains a selector and a declaration block.</li>
+          <li>
+            A CSS rule set contains a selector and a declaration block.
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati sint dolorum dolor, odio velit id illo! Doloribus iste
+                blanditiis facilis error accusamus magnam nemo, odio enim? Neque
+                quidem rem minus.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati sint dolorum dolor, odio velit id illo! Doloribus iste
+                blanditiis facilis error accusamus magnam nemo, odio enim? Neque
+                quidem rem minus.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Ordered List</h2>
+        <ol>
+          <li>One</li>
+          <li>
+            Two
+            <ul>
+              <li>Two point one</li>
+              <li>Two point Two</li>
+            </ul>
+          </li>
+        </ol>
+        <h2>Image</h2>
+        <div className="imgWrapper">
+          <img
+            src="https://www.w3schools.com/images/mylearning.png"
+            alt="img"
+          />
+        </div>
+        <h2>Code</h2>
+        <div className="codeWrapper">
+          <Prism className="prism" language="tsx" colorScheme="dark">
+            {`
+              p {
+                  color: yellow;
+                  text-align: center;
+                  font-size:18px
+              }     
+              `}
+          </Prism>
+        </div>
       </div>
     </section>
   );

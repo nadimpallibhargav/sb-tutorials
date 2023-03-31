@@ -1,102 +1,128 @@
-@import './variables.scss';
+@import "./variables.scss";
 @import url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Primer/19.1.1/tooltips.min.css");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family:  sans-serif;
-}
-img{
-    max-width: 100%;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.main{
-    padding: 104px 24px 24px 244px;
-    nav{
-        position: fixed;
-        top: 79px;
-        left: 0;
-        width: 220px;
-        height: calc(100vh - 79px) ;
-        border-right: 1px solid $color-grey-0;
-        // padding: 24px;
-        ul{
-            list-style: none;
-            li{
-                font-size: 20px;
-                padding: 8px 20px;
-                cursor: pointer;
-                &:not(:last-child){
-                    padding-bottom: 14px;
-                }
-                &.active{
-                    background: $color-black-0;
-                    color: $color-white-0;
-                }
-            }
+button {
+  border: initial;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  padding: 104px 24px 24px 244px;
+  nav {
+    position: fixed;
+    top: 79px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 79px);
+    border-right: 1px solid $color-grey-0;
+    // padding: 24px;
+    ul {
+      list-style: none;
+      li {
+        font-size: 20px;
+        padding: 8px 20px;
+        cursor: pointer;
+        &:not(:last-child) {
+          padding-bottom: 14px;
         }
+        &.active {
+          background: $color-black-0;
+          color: $color-white-0;
+        }
+      }
     }
-    h1{
-        font-size: 46px;
-        text-align: center;
+  }
+  h1 {
+    font-size: 46px;
+    text-align: center;
+    padding-bottom: 32px;
+    font-weight: 700;
+  }
+  h3 {
+    padding: 12px 0;
+    border-top: 1px solid $color-grey-0;
+    border-bottom: 1px solid $color-grey-0;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .content {
+    h2 {
+      font-size: 24px;
+      padding: 18px 0;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 18px;
+      padding-bottom: 16px;
+      font-weight: 300;
+      padding-left: 16px;
+      &:last-child {
         padding-bottom: 32px;
-        font-weight: 700;
+      }
     }
-    h3{
-        padding: 12px 0;
-        border-top: 1px solid $color-grey-0;
-        border-bottom: 1px solid $color-grey-0;
-        width: 100%;
-        font-weight: 400;
+    ul {
+      padding-left: 32px;
+      li {
         font-size: 18px;
-        margin-bottom: 12px;
+        padding: 8px 0;
+        font-weight: 300;
+        li {
+          font-size: 16px;
+        }
+      }
     }
-    .content{
-        h2{
-            font-size: 24px;
-            padding: 18px 0;
-            font-weight: 500;
+    ol {
+      padding-left: 32px;
+      li {
+        font-size: 18px;
+        padding: 8px 0;
+        font-weight: 300;
+        li {
+          font-size: 16px;
         }
-        
-        p{
-            font-size: 18px;
-            padding-bottom: 16px;
-            font-weight: 300;
-            padding-left: 16px;
-            &:last-child{
-                padding-bottom: 32px;
-            }
-        }
-        ul{
-            padding-left: 32px;
-            li{
-                font-size: 18px;
-                padding: 8px 0;
-                font-weight: 300;
-                li{
-                    font-size: 16px;
-                }
-            }
-        }
-        ol{
-            padding-left: 32px;
-            li{
-                font-size: 18px;
-                padding: 8px 0;
-                font-weight: 300;
-                li{
-                    font-size: 16px;
-                }
-            }
-        }
-        .imgWrapper{
-            text-align: center;
-            padding: 18px 0;
-        }
-        .codeWrapper{
-            padding: 24px 0;
-        }
+      }
     }
+    .imgWrapper {
+      text-align: center;
+      padding: 18px 0;
+    }
+    .codeWrapper {
+      padding: 24px 0;
+    }
+  }
+}
+
+.note {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 16px 32px;
+  background-color: $color-grey-0;
+  color: $color-black-0;
+  font-size: 15px;
+}
+
+.commonBtn {
+  background-color: $color-black-1;
+  color: $color-white-0;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 6px 18px;
+  &:hover {
+    background-color: $color-black-0;
+  }
 }

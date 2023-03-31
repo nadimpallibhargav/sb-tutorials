@@ -1,7 +1,7 @@
 import React from "react";
 import { Prism } from "@mantine/prism";
 
-const HTML = () => {
+const Basics = () => {
   return (
     <section className="main">
       <nav>
@@ -10,18 +10,11 @@ const HTML = () => {
             <a href="/html">headings</a>
           </li>
           <li>
-            <a href="/html-basics">Basics</a>
+            <a href="/basics">Basics</a>
           </li>
         </ul>
       </nav>
-      <h1>Headings</h1>
-      <h3>ftgyhjnhgvcfgvhb</h3>
-      <div className="note">
-        <p>
-          <strong>Note: </strong> Browsers automatically add some white space (a
-          margin) before and after a heading.
-        </p>
-      </div>
+      <h1>Basics</h1>
       <div className="content">
         <h2>Intro</h2>
         <p>
@@ -93,10 +86,9 @@ const HTML = () => {
               `}
           </Prism>
         </div>
-        <button className="commonBtn">Try it Yourself</button>
       </div>
     </section>
   );
 };
 
-export default HTML;
+export default Basics;

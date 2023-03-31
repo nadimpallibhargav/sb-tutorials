@@ -1,29 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Prism } from "@mantine/prism";
 
-const HTML = () => {
+const CssBasics = () => {
   return (
     <section className="main">
       <nav>
         <ul>
           <li>
-            <a href="/html">headings</a>
+            <a href="/css">Intro to CSS</a>
           </li>
           <li>
-            <a href="/html-basics">Basics</a>
+            <a href="/css-basics">CSS Basics</a>
           </li>
         </ul>
       </nav>
-      <h1>Headings</h1>
-      <h3>ftgyhjnhgvcfgvhb</h3>
-      <div className="note">
-        <p>
-          <strong>Note: </strong> Browsers automatically add some white space (a
-          margin) before and after a heading.
-        </p>
-      </div>
+      <h1>CSS Basics</h1>
       <div className="content">
-        <h2>Intro</h2>
+        <h2>CSS Basics</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur¿ ʔ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
           adipisicing elit. Molestiae, officiis quasi! Recusandae vel amet aut.
@@ -93,10 +86,9 @@ const HTML = () => {
               `}
           </Prism>
         </div>
-        <button className="commonBtn">Try it Yourself</button>
       </div>
     </section>
   );
 };
 
-export default HTML;
+export default CssBasics;
